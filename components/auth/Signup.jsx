@@ -8,7 +8,6 @@ export default function Signup() {
   const router = useRouter();
   const [isDoctor, setIsDoctor] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -52,7 +51,6 @@ export default function Signup() {
 
     try {
       const formData = new FormData();
-
       Object.keys(form).forEach((key) => {
         if (form[key]) formData.append(key, form[key]);
       });
@@ -181,7 +179,6 @@ export default function Signup() {
               onChange={handleChange}
               required
             />
-
             <input
               name="citizenshipNumber"
               placeholder="Citizenship Number"

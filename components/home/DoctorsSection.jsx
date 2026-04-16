@@ -70,7 +70,6 @@ export default function DoctorsSection() {
 
   const getVisibleDoctors = () => {
     if (doctors.length <= 4) return doctors;
-
     const visible = [];
     for (let i = 0; i < 4; i++) {
       visible.push(doctors[(startIndex + i) % doctors.length]);
